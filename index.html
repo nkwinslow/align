@@ -8,9 +8,40 @@
 
 <body ng-controller="mainCtrl as main">
 
-  <div class="mainHeader">Align Rehab</div>
+  <div class="mainHeader"><img class="img" id="logo" src="./img/logo2.jpg"/></div>
 
+  <div class="container">
+    <h2>Align Rehabilitation & Wellness</h2>
+  </div>
 
+  <div class="container">
+      <div class="card" ng-repeat="doctor in main.doctors">
+          <h3 class="name">{{ doctor.name }}</h3>
+          <div class="image">
+              <img class="img" ng-src="{{ doctor.img }}"/>
+          </div>
+          <h4 class="description">Title</h4>
+          <p class="description-text">{{ doctor.title || "Doctor of dopeness"}}</p>
+      </div>
+      <div class="map" id="map"></div>
+  </div>
+
+  <div class="footer"></div>
+
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.2625339, lng: -111.6656856},
+          zoom: 20,
+          mapTypeId: google.maps.MapTypeId.SATELLITE
+        });
+      }
+    </script>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8dA8cHjIoZnKWujvaCBL1JMaofYcys2k&callback=initMap">
+    </script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
   <script src="./js/app.js"></script>
