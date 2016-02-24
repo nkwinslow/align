@@ -12,6 +12,16 @@ angular.module('align')
         name: 'Dr. Clifford',
         title: 'The Dopestest',
         img: './img/clifford.jpg'
+      },
+      {
+        name: 'Consuela',
+        title: 'Cooler than everyone ever.',
+        img: './img/consuela.jpg'
+      },
+      {
+        name: 'Jooooohnnnn',
+        title: 'CEEENAAAAA!!!!!',
+        img: './img/john.jpg'
       }
 
     ]
