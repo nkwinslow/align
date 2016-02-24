@@ -3,6 +3,22 @@ angular.module('align')
     var main = this;
 
     main.doctors = [
+
+      {
+        name: 'Matt Noxon',
+        title: 'Criminal Mastermind',
+        img: './img/matt.jpg'
+      },
+      {
+        name: 'Nick Winslow',
+        title: 'Style Ninja',
+        img: './img/nick.jpg'
+      },
+      {
+        name: 'Paige Viehweg',
+        title: 'Front-End Master',
+        img: './img/paige.jpg'
+      },
       {
         name: 'Dr. Walker',
         title: 'The Dopest',
@@ -17,11 +33,6 @@ angular.module('align')
         name: 'Consuela',
         title: 'Cooler than everyone ever.',
         img: './img/consuela.jpg'
-      },
-      {
-        name: 'Jooooohnnnn',
-        title: 'CEEENAAAAA!!!!!',
-        img: './img/john.jpg'
       }
 
     ]
