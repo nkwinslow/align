@@ -1,6 +1,6 @@
 <div class="container">
     <div class="card" ng-repeat="doctor in main.doctors" ng-style="{'background-image':'url({{doctor.img}})'}">
-      <div class="drBio"><div ui-sref="bio({shortName: doctor.shortName})">Bio</div></div>
+      <div class="drBio"><a ui-sref="bio({shortName: doctor.shortName})">Bio</a></div>
       <div class="drInfoBox">
         <div class="drName">{{doctor.name}}</div>
           <div class="drInfo">{{doctor.title}}</div>

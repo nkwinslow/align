@@ -114,6 +114,14 @@
   justify-content: center;
 }
 
+.drBio a {
+  color: white;
+}
+
+.drBio a:hover {
+  color: #447EAC;
+}
+
 .drBio:hover {
   color: #447EAC;
   opacity: .9;
