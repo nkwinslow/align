@@ -34,7 +34,7 @@ angular.module('align')
 
     ]
 
-    main.selectedIndex = 2;
+    main.selectedIndex = 0;
 
     main.setActive = function(page) {
       main.selectedIndex = page;
