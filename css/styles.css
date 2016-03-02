@@ -2,13 +2,26 @@
   height: 100px;
   width: 100%;
   background-color: #475B62;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 0;
 }
 
-#logo {
-  width: 140px;
-  height: 140px;
-  margin-left: 15px;
-  margin-top:
+.mainTitle {
+  font-size: 35px;
+  padding-left: 15px;
+  margin: 0;
+  color: white;
+}
+
+.mainText {
+  color: #55D672;
+  width: 25%;
+  margin-bottom: 30px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid black;
+
 }
 
 .parallax {
@@ -32,24 +45,92 @@
     background-image: url("http://img.photobucket.com/albums/v313/Spider-Man9x17/AvengersFanFicTeamRoof7.jpg");
 }
 .container {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    margin-bottom: 40px;
+}
+
+.content {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.content img {
+  box-shadow: 0 5px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.content ul {
+  list-style: circle;
+  margin-bottom: 30px;
+}
+
+.content ul li {
+  margin: 10px 0;
+}
+
+.content h2 {
+  margin-top: 50px;
 }
 
 .card {
   width: 300px;
-  background-color: white;
+  height: 300px;
   margin: 20px;
-  padding: 20px;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.2s ease-in-out;
+  transition: all .2s ease-in-out 0s;
+  background-size: 100%;
+  position: relative;
 }
 
-.name {
-  color: #d11c24
+.drInfoBox {
+  background-color: #2D2E2A;
+  visibility: hidden;
+  opacity: 0;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transition: all .4s ease-in-out;
+}
+
+.drBio {
+  background-color: #2D2E2A;
+  height: 0px;
+  opacity: 0;
+  width: 40px;
+  margin-right: 15px;
+  color: white;
+  font-size: 22px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all .4s ease-in-out;
+  display: flex;
+  justify-content: center;
+}
+
+.drBio:hover {
+  color: #447EAC;
+  opacity: .9;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.drName {
+  padding-left: 5px;
+  margin-top: 3px;
+  color: white;
+}
+
+.drInfo {
+  color: white;
+  padding-left: 10px;
+  margin-top: 5px;
+  font-size: 18px;
 }
 
 .descriptionText {
@@ -60,21 +141,17 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
-.image {
-  height: 200px;
-  width: 200px;
-  margin: 0 auto;
+.card:hover .drInfoBox {
+  display: block;
+  visibility: visible;
+  height: 80px;
+  opacity: .8;
 }
 
-.img {
-  transition-property: border-radius;
-  transition-duration: 200ms;
-  transition-timing-function: linear;
-  border: 2px solid #0A2933;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-
+.card:hover .drBio {
+  visibility: visible;
+  height: 35px;
+  opacity: .8;
 }
 
 .img:hover {
@@ -93,6 +170,15 @@
   height: 150px;
   width: 100%;
   background-image: url(../img/background.jpg)
+}
+
+.missionText {
+  border: 1px solid black;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding: 10px;
+  margin-bottom: 40px;
+  color: black;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 input {
@@ -136,6 +222,30 @@ input:focus ~ label, input:valid ~ label 		{
   height: 350px;
   width: 500px;
   border: 2px solid black;
+  margin: 40px 40px;
+}
+
+
+
+/* BIO SECTION ======================================= */
+
+.bio {
+  width: 90%;
+  margin: 0 auto;
   margin-bottom: 40px;
-  margin-left: 40px;
+}
+
+.bioDescription {
+  float: right;
+  width: 50%;
+}
+
+.bioDescription p {
+  font-size: 20px;
+}
+
+.bio img {
+  border-radius: 10px;
+  height: 400px;
+  width: 400px;
 }

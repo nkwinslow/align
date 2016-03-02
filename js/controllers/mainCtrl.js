@@ -2,41 +2,42 @@ angular.module('align')
   .controller('mainCtrl', function(mainService){
     var main = this;
 
-    main.doctors = [
+    main.doctors = mainService.getDoctors();
+
+    main.pages = [
 
       {
-        name: 'Matt Noxon',
-        title: 'Criminal Mastermind',
-        img: './img/matt.jpg'
+        id: 1,
+        link: '#/home',
+        text: 'Home'
       },
       {
-        name: 'Nick Winslow',
-        title: 'Style Ninja',
-        img: './img/nick.jpg'
+        id: 2,
+        link: '#/staff',
+        text: 'Staff'
       },
       {
-        name: 'Paige Viehweg',
-        title: 'Front-End Master',
-        img: './img/paige.jpg'
+        id: 3,
+        link: '#/mission',
+        text: 'Mission'
       },
       {
-        name: 'Dr. Walker',
-        title: 'The Dopest',
-        img: './img/walker.jpg'
+        id: 4,
+        link: '#/model',
+        text: 'Model'
       },
       {
-        name: 'Dr. Clifford',
-        title: 'The Dopestest',
-        img: './img/clifford.jpg'
-      },
-      {
-        name: 'Consuela',
-        title: 'Cooler than everyone ever.',
-        img: './img/consuela.jpg'
+        id: 5,
+        link: '#/contact',
+        text: 'Contact'
       }
 
     ]
 
-    main.yup = 'aww yiss'
-    console.log(main.yup)
+    main.selectedIndex = 2;
+
+    main.setActive = function(page) {
+      main.selectedIndex = page;
+    }
+
   })
