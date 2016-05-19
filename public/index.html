@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="align">
+<head>
+  <title>Align Rehab</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+</head>
+
+<body ng-controller="mainCtrl as main">
+
+  <div class="logo">
+    ALIGN
+  </div>
+
+    <div id='cssmenu'>
+    <ul>
+       <li ng-repeat="page in main.pages" ng-click="main.setActive($index)" ng-class="{active: $index===main.selectedIndex}"><a href={{page.link}}><span>{{page.text}}</span></a></li>
+    </ul>
+    </div>
+
+
+
+  <ui-view></ui-view>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/controllers/mainCtrl.js"></script>
+  <script src="./js/controllers/bioCtrl.js"></script>
+  <script src="./js/controllers/usersCtrl.js"></script>
+  <script src="./js/services/mainService.js"></script>
+  <script src="./js/services/dataService.js"></script>
+
+</body>
+
+
+</html>
